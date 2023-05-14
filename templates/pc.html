@@ -1,0 +1,398 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Python Comprehension - Debattle</title>
+
+    <!-- Bootstrap 4 CSS. This is for the alpha 3 release of Bootstrap 4. This should be updated when Bootstrap 4 is officially released. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+      
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="{% static 'assets/css/custom1.css' %}" rel="stylesheet">
+    
+    <!-- For icons -->
+    <link href="{% static 'assets/css/font-awesome-4.6.3/css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="topNav" class="navbar navbar-full navbar-static-top navbar-dark bg-inverse m-b-1">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#navbar">
+            &#9776;
+        </button>
+        <a class="navbar-brand" href="/">DeBattle</a>
+        <div class="collapse navbar-toggleable-sm" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/ps">Syntax</a>
+                        <a class="dropdown-item" href="/pp">Projects</a>
+                        <a class="dropdown-item" href="/pl">Libraries</a>
+                    </div>
+                </li>
+            </ul>
+
+            </ul>
+        </div>
+    </nav>
+    
+
+<div class="container-fluid">
+
+		<!-- Left Column -->
+		<div class="col-sm-3">
+
+			<!-- List-Group Panel -->
+			<div class="card">
+				<div class="card-header p-b-0">
+					<h5 class="card-title"><i class="fa fa-random" aria-hidden="true"></i> Anthology</h5>
+				</div>
+				<div class="list-group list-group-flush">
+					<a href="#l1" class="list-group-item list-group-item-action">Comprehension</a>
+					<a href="#l2" class="list-group-item list-group-item-action">Inheritance and polymorphism</a>
+					<a href="#l3" class="list-group-item list-group-item-action">Classes and objects</a>
+					<a href="#l4" class="list-group-item list-group-item-action">Methods and attributes</a>
+					<a href="#l5" class="list-group-item list-group-item-action">Decorators</a>
+				</div>
+			</div>
+
+			<!-- Text Panel -->
+			<div class="card">
+				<div class="card-header p-b-0">
+					<h5 class="card-title"><i class="fa fa-cog" aria-hidden="true"></i> Module 2</h5>
+				</div>
+
+				<div class="card-block">
+					<p class="card-text">Designed for beginners to understand python better</p>
+				</div>
+			</div>
+
+			<!-- Text Panel -->
+			<div class="card">
+				<div class="card-header p-b-0">
+					<h5 class="card-title">
+						<i class="fa fa-bullhorn" aria-hidden="true"></i>
+						Tips
+					</h5>
+				</div>
+				<div class="card-block">
+					<p class="card-text">
+                        2 Website where to improve your understanding
+                        <ul>
+                            <li><link rel="stylesheet" href="https://www.w3schools.com">W3Schools</li>
+                            <li><link rel="stylesheet" href="https://www.bbc.co.uk/bitesize/topics/zhy39j6">BBC Bitesize</li>
+                        </ul>
+                    </p>
+					<div class="btn-group btn-group-sm" role="group">
+					</div>
+				</div>
+			</div>
+				
+		</div><!--/Left Column-->
+  
+  
+		<!-- Center Column -->
+		<div class="col-sm-6">
+		
+			<!-- Alert -->
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<strong>Module 2:</strong> The basics!
+			</div>
+		
+			<!-- Articles -->
+			<div class="row">
+				<article class="col-xs-12">
+					<h2><bold>1. Comprehension</bold></h2>
+                    <p>Comprehensions are a way to create a new sequence from an existing sequence. Here's an example of a list comprehension:</p>
+					<p><button class="btn btn-outline-success" id="l1">Lesson 1</button></p>
+					<pre>
+                        <code>                        
+                            numbers = [1, 2, 3, 4, 5]
+                            squares = [n**2 for n in numbers]
+                            print(squares) # Output: [1, 4, 9, 16, 25]
+                            
+                        </code>
+                    </pre>
+                    <p>In this example, the list comprehension creates a new list called squares by squaring each element in the original list numbers.</p>
+				</article>
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<article class="col-xs-12">
+					<h2>2. Inheritance and polymorphism</h2>
+                    <p>Inheritance allows us to create a new class that is a modified version of an existing class. Here's an example:</p>
+                    <p><button class="btn btn-outline-success" id="l2">Lesson 2</button></p>
+					<pre>
+                        <code>                        
+                            class Animal:
+                            def __init__(self, name):
+                                self.name = name
+                        
+                            def make_sound(self):
+                                pass
+                        
+                        class Dog(Animal):
+                            def make_sound(self):
+                                print("Woof!")
+                        
+                        class Cat(Animal):
+                            def make_sound(self):
+                                print("Meow!")
+                        
+                        my_dog = Dog("Fido")
+                        my_cat = Cat("Fluffy")
+                        
+                        my_dog.make_sound() # Output: "Woof!"
+                        my_cat.make_sound() # Output: "Meow!"
+                        
+                        </code>
+                    </pre>
+                    <p>In this example, we define a base class Animal with an abstract method make_sound. We then create two subclasses Dog and Cat that inherit from the Animal class and override the make_sound method. We then create instances of these classes and call the make_sound method to hear the appropriate animal sound.</p>
+				</article>
+			</div>
+
+			<hr>
+			<div class="row">
+                <article class="col-xs-12">
+					<h2>3. Classes and objects</h2>
+                    <p>Classes are used to create objects with shared attributes and methods. Here's an example:</p>
+					<p><button class="btn btn-outline-success" id="l3">Lesson 3</button></p>
+					<pre>
+                        <code>                        
+                            class Person:
+                            def __init__(self, name, age):
+                                self.name = name
+                                self.age = age
+                        
+                            def say_hello(self):
+                                print("Hello, my name is " + self.name + " and I am " + str(self.age) + " years old.")
+                        
+                            person1 = Person("Alice", 25)
+                            person2 = Person("Bob", 30)
+                            
+                            person1.say_hello() # Output: "Hello, my name is Alice and I am 25 years old."
+                            person2.say_hello() # Output: "Hello, my name is Bob and I am 30 years old."
+                        
+                        </code>
+                    </pre>
+                    <p>In this example, we define a class Person with two attributes name and age, and a method say_hello that prints a greeting with the person's name and age. We then create two instances of the class and call the say_hello method on each instance.</p>
+				</article>
+			</div>
+            <hr>
+
+			<div class="row">
+                <article class="col-xs-12">
+                    <h2>4. Methods and attributes</h2>
+                    <p>Methods are functions that belong to a class, while attributes are variables that belong to a class or object. Here's an example:</p>
+                    <p><button class="btn btn-outline-success" id="l4">Lesson 4</button></p>
+                    <pre>
+                        <code>                        
+                            class Rectangle:
+                            def __init__(self, width, height):
+                                self.width = width
+                                self.height = height
+                        
+                            def area(self):
+                                return self.width * self.height
+                        
+                            def perimeter(self):
+                                return 2 * (self.width + self.height)
+                        
+                            my_rect = Rectangle(3, 4)
+                            
+                            print(my_rect.width) # Output: 3
+                            print(my_rect.height) # Output: 4
+                            print(my_rect.area()) # Output: 12
+                            print(my_rect.perimeter()) # Output: 14
+                        
+                        </code>
+                    </pre>
+                    <p>In this example, we define a class Rectangle with two attributes width and height, and two methods area and perimeter that calculate the area and perimeter of the rectangle. We then create an instance of the class and access its attributes and methods.</p>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>5. Decorators</h2>
+                <p>Decorators are a powerful feature in Python that allow you to modify the behavior of functions or classes. Here's an example of a simple decorator:</p>
+                <p><button class="btn btn-outline-success" id="l5">Lesson 5</button></p>
+                <pre>
+                    <code>                        
+                        def my_decorator(func):
+                        def wrapper():
+                            print("Before the function is called.")
+                            func()
+                            print("After the function is called.")
+                        return wrapper
+                    
+                        @my_decorator
+                        def say_hello():
+                            print("Hello!")
+                        
+                        say_hello() # Output: "Before the function is called." "Hello!" "After the function is called."
+                    
+                    </code>
+                </pre>
+                <p>In this example, we define a decorator function my_decorator that takes a function func as an argument and returns a new function wrapper that wraps around func and adds some extra behavior. We then apply the decorator to a function say_hello using the @ symbol, which modifies the behavior of the function by adding the extra behavior defined in the decorator.</p>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>6. Generators</h2>
+                <p>Generators are a way to create iterators in a more concise and memory-efficient way than using a regular class-based iterator. Here's an example of a generator that generates the Fibonacci sequence:</p>
+                <p><button class="btn btn-outline-success" id="l6">Lesson 6</button></p>
+                <pre>
+                    <code>                        
+                        def fibonacci():
+                        a, b = 0, 1
+                        while True:
+                            yield a
+                            a, b = b, a + b
+                    
+                        fib = fibonacci()
+                        for i in range(10):
+                            print(next(fib)) # Output: 0 1 1 2 3 5 8 13 21 34
+                    
+                    </code>
+                </pre>
+                <p>In this example, we define a generator function fibonacci that generates the Fibonacci sequence by using the yield keyword to produce each number in the sequence one at a time. We then create an instance of the generator using the function fibonacci, and use the next function to iterate through the sequence and print the first 10 numbers.</p>
+            </article>
+        </div>
+
+        <hr>
+    </div>
+
+		</div><!--/Center Column-->
+
+
+
+
+	</div><!--/container-fluid-->
+	
+	<footer>
+		<div class="footer-blurb">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 footer-blurb-item">
+						<h3><i class="fa fa-text-height" aria-hidden="true"></i> Syntax</h3>
+						<p>Understanding how to code with the basic syntax.</p>
+						<p><a class="btn btn-primary" href="/ps">See now!</a></p>
+					</div>
+					<div class="col-sm-3 footer-blurb-item">
+						<h3><i class="fa fa-wrench" aria-hidden="true"></i> Libraries</h3>
+                        <p>Learn about the exciting world about python libraries, and how much of a blessing they are.</p>
+						<p><a class="btn btn-success" href="/pl">See now!</a></p>
+					</div>
+					<div class="col-sm-3 footer-blurb-item">
+						<h3><i class="fa fa-paperclip" aria-hidden="true"></i> Projects</h3>
+                        <p>Do some projects and learn how to make your own (don't forget to shaere them on your profile!).</p>
+						<p><a class="btn btn-primary" href="/pp">See now!</a></p>
+					</div>
+					<div class="col-sm-3 footer-blurb-item">
+						
+						<!-- Thumbnails --> 
+						<h3><i class="fa fa-camera" aria-hidden="true"></i> </h3>
+							<div class="row">
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=vine" alt="">
+									</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=sky" alt="">
+									</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=sky" alt="">
+									</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=vine" alt="">
+									</a>
+								</div>
+							</div>
+							
+					</div>
+
+				</div>
+				<!-- /.row -->	
+			</div>
+        </div>
+        
+        <div class="small-print">
+        	<div class="container">
+        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        		<p>Copyright &copy; Example.com 2015 </p>
+        	</div>
+        </div>
+	</footer>
+
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+
+    <!-- Tether -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 4 JavaScript. This is for the alpha 3 release of Bootstrap 4. This should be updated when Bootstrap 4 is officially released. -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+
+    <!-- Initialize Bootstrap functionality -->
+    <script>
+    // Initialize tooltip component
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // Initialize popover component
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    </script> 
+    
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+	
+</body>
+
+</html>

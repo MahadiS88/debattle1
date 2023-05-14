@@ -1,0 +1,564 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Python Syntax - Debattle</title>
+
+    <!-- Bootstrap 4 CSS. This is for the alpha 3 release of Bootstrap 4. This should be updated when Bootstrap 4 is officially released. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+      
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="{% static 'assets/css/custom1.css' %}" rel="stylesheet">
+    
+    <!-- For icons -->
+    <link href="{% static 'assets/css/font-awesome-4.6.3/css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="topNav" class="navbar navbar-full navbar-static-top navbar-dark bg-inverse m-b-1">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#navbar">
+            &#9776;
+        </button>
+        <a class="navbar-brand" href="/">DeBattle</a>
+        <div class="collapse navbar-toggleable-sm" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/pc">Comprehension</a>
+                        <a class="dropdown-item" href="/pp">Projects</a>
+                        <a class="dropdown-item" href="/pl">Libraries</a>
+                    </div>
+                </li>
+            </ul>
+
+            </ul>
+        </div>
+    </nav>
+    
+
+<div class="container-fluid">
+
+		<!-- Left Column -->
+		<div class="col-sm-3">
+
+			<!-- List-Group Panel -->
+			<div class="card">
+				<div class="card-header p-b-0">
+					<h5 class="card-title"><i class="fa fa-random" aria-hidden="true"></i> Anthology</h5>
+				</div>
+				<div class="list-group list-group-flush">
+					<a href="#l1" class="list-group-item list-group-item-action">Basic syntax and data types</a>
+					<a href="#l2" class="list-group-item list-group-item-action">Variables and operators</a>
+					<a href="#l3" class="list-group-item list-group-item-action">Conditional statements</a>
+					<a href="#l4" class="list-group-item list-group-item-action">Loops</a>
+					<a href="#l5" class="list-group-item list-group-item-action">Break and Continue statements</a>
+                    <a href="#l6" class="list-group-item list-group-item-action">Lists</a>
+					<a href="#l7" class="list-group-item list-group-item-action">Dictionaries</a>
+					<a href="#l8" class="list-group-item list-group-item-action">Defining and calling functions</a>
+					<a href="#l9" class="list-group-item list-group-item-action">File handling</a>
+                    <a href="#l10" class="list-group-item list-group-item-action">Regular expressions</a>
+                    <a href="#l11" class="list-group-item list-group-item-action">Error handling</a>
+				</div>
+			</div>
+
+			<!-- Text Panel -->
+			<div class="card">
+				<div class="card-header p-b-0">
+					<h5 class="card-title"><i class="fa fa-cog" aria-hidden="true"></i> Module 1</h5>
+				</div>
+
+				<div class="card-block">
+					<p class="card-text">Designed for complete beginners to grasp the basic concepts of python</p>
+				</div>
+			</div>
+
+			<!-- Text Panel -->
+			<div class="card">
+				<div class="card-header p-b-0">
+					<h5 class="card-title">
+						<i class="fa fa-bullhorn" aria-hidden="true"></i>
+						Tips
+					</h5>
+				</div>
+				<div class="card-block">
+					<p class="card-text">
+                        5 Tips to get better
+                        <ul>  
+                            <li>Start with the fundamentals: Before jumping into more complex Python concepts, it's essential to have a solid understanding of the fundamentals. This includes basic data types such as strings, integers, and booleans, as well as data structures like lists, tuples, and dictionaries.</li>
+                            <li>Practice writing code: One of the best ways to learn Python is by actually writing code. Start with simple programs, such as printing "Hello World" or adding two numbers together, and gradually work your way up to more complex projects.</li>
+                            <li>Use online resources: There are many online resources available for learning Python, including tutorials, video courses, and forums. Take advantage of these resources to supplement your learning and gain a deeper understanding of the language.</li>
+                            <li>Collaborate with others: Collaborating with other Python developers can be an effective way to learn the language. Join online communities or attend local meetups to connect with other Python enthusiasts and learn from their experiences.</li>
+                            <li>Read the documentation: Python has excellent documentation that covers all aspects of the language, including syntax, modules, and libraries. Take the time to read through the documentation to gain a deeper understanding of Python and its capabilities.</li>
+                        </ul>
+                    </p>
+					<div class="btn-group btn-group-sm" role="group">
+					</div>
+				</div>
+			</div>
+				
+		</div><!--/Left Column-->
+  
+  
+		<!-- Center Column -->
+		<div class="col-sm-6">
+		
+			<!-- Alert -->
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<strong>Module 1:</strong> The basics!
+			</div>
+		
+			<!-- Articles -->
+			<div class="row">
+				<article class="col-xs-12">
+					<h2><bold>1. Basic syntax and data types</bold></h2>
+					<p>Python is an interpreted language. The <i>print()</i> function is used to display output to the screen. Python has several data types, including integers, floating-point numbers, strings, and Boolean values. The <i>type()</i> function is used to determine the type of a variable.</p>
+					<p><button class="btn btn-outline-success" id="l1">Lesson 1</button></p>
+					<pre>
+                        <code>                        
+                            # Display output to the screen
+                            print("Hello, world!")
+                            
+                            # Determine the type of a variable
+                            x = 5
+                            print(type(x)) # Output: <class 'int'>
+                        </code>
+                    </pre>
+				</article>
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<article class="col-xs-12">
+					<h2>2. Variables and operators</h2>
+					<p>Variables are used to store data. Variables can be assigned using the = operator. Arithmetic operators include +, -, *, /, % (modulus), and ** (exponentiation). Comparison operators include ==, !=, >, <, >=, and <=. Logical operators include and, or, and not.</p>
+					<p><button class="btn btn-outline-success" id="l2">Lesson 2</button></p>
+					<pre>
+                        <code>                        
+                            # Assigning variables
+                            x = 5
+                            y = 3
+                            
+                            # Arithmetic operators
+                            print(x + y) # Output: 8
+                            print(x - y) # Output: 2
+                            print(x * y) # Output: 15
+                            print(x / y) # Output: 1.6666666666666667
+                            print(x % y) # Output: 2
+                            print(x ** y) # Output: 125
+                            
+                            # Comparison operators
+                            print(x == y) # Output: False
+                            print(x != y) # Output: True
+                            print(x > y) # Output: True
+                            print(x < y) # Output: False
+                            print(x >= y) # Output: True
+                            print(x <= y) # Output: False
+                            
+                            # Logical operators
+                            print(x > 3 and y < 5) # Output: True
+                            print(x > 10 or y < 1) # Output: False
+                            print(not(x > 3 and y < 5)) # Output: False
+                        </code>
+                    </pre>
+				</article>
+			</div>
+
+			<hr>
+			<div class="row">
+                <article class="col-xs-12">
+					<h2>3. Conditional statements (if-else)</h2>
+                    <p>The if statement is used to execute code if a certain condition is true. The else statement is used to execute code if the condition is false. The elif statement is used to execute code if multiple conditions need to be tested.</p>
+					<p><button class="btn btn-outline-success" id="l3">Lesson 3</button></p>
+					<pre>
+                        <code>                        
+                            # Using if and else statements
+                            x = 5
+                            if x > 10:
+                                print("x is greater than 10")
+                            else:
+                                print("x is less than or equal to 10")
+                            
+                            # Using elif statements
+                            x = 3
+                            if x > 5:
+                                print("x is greater than 5")
+                            elif x == 5:
+                                print("x is equal to 5")
+                            else:
+                                print("x is less than 5")
+                        </code>
+                    </pre>
+				</article>
+			</div>
+            <hr>
+
+			<div class="row">
+                <article class="col-xs-12">
+                    <h2>4. Loops (for, while)</h2>
+                    <p>The for loop is used to iterate over a sequence (e.g., a list or string). The while loop is used to repeatedly execute code while a certain condition is true. The <code>range()</code> function can be used to generate a sequence of numbers to iterate over.</p>
+                    <p><button class="btn btn-outline-success" id="l4">Lesson 4</button></p>
+                    <pre>
+                        <code>                        
+                            # Using a for loop
+                            fruits = ["apple", "banana", "cherry"]
+                            for fruit in fruits:
+                                print(fruit)
+                            
+                            # Using a while loop
+                            i = 0
+                            while i < 5:
+                                print(i)
+                                i += 1
+                            
+                            # Using the range() function with a for loop
+                            for i in range(5):
+                                print(i)
+                        </code>
+                    </pre>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>5. Break and continue statements</h2>
+                <p>The break statement is used to exit a loop. The continue statement is used to skip over an iteration and continue to the next one.</p>
+                <p><button class="btn btn-outline-success" id="l5">Lesson 5</button></p>
+                <pre>
+                    <code>                        
+                        # Using a break statement
+                        i = 0
+                        while i < 5:
+                            if i == 3:
+                                break
+                            print(i)
+                            i += 1
+                        
+                        # Using a continue statement
+                        i = 0
+                        while i < 5:
+                            i += 1
+                            if i == 3:
+                                continue
+                            print(i)
+                    </code>
+                </pre>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>6. Lists</h2>
+                <p>A list is a collection of items, which can be of different types. Lists are mutable, which means that their contents can be changed. The <code>append()</code> method is used to add an item to the end of a list. The <code>len()</code> function is used to determine the length of a list.</p>
+                <p><button class="btn btn-outline-success" id="l6">Lesson 6</button></p>
+                <pre>
+                    <code>                        
+                        # Creating a list
+                        fruits = ["apple", "banana", "cherry"]
+                        print(fruits)
+                        
+                        # Accessing list items
+                        print(fruits[0]) # Output: "apple"
+                        
+                        # Changing list items
+                        fruits[1] = "orange"
+                        print(fruits) # Output: ["apple", "orange", "cherry"]
+                        
+                        # Adding an item to a list
+                        fruits.append("pear")
+                        print(fruits) # Output: ["apple", "orange", "cherry", "pear"]
+                        
+                        # Determining the length of a list
+                        print(len(fruits)) # Output: 4
+                    </code>
+                </pre>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>7. Dictionaries</h2>
+                <p>A dictionary is a collection of key-value pairs, where each key is associated with a value. Dictionaries are mutable. The <code>keys()</code> method is used to return a list of the dictionary's keys. The <code>values()</code> method is used to return a list of the dictionary's values.                </p>
+                <p><button class="btn btn-outline-success" id="l7">Lesson 7</button></p>
+                <pre>
+                    <code>                        
+                        # Creating a dictionary
+                        person = {"name": "Alice", "age": 30, "city": "New York"}
+                        print(person)
+                        
+                        # Accessing dictionary items
+                        print(person["name"]) # Output: "Alice"
+                        
+                        # Changing dictionary items
+                        person["age"] = 35
+                        print(person) # Output: {"name": "Alice", "age": 35, "city": "New York"}
+                        
+                        # Adding an item to a dictionary
+                        person["country"] = "USA"
+                        print(person) # Output: {"name": "Alice", "age": 35, "city": "New York", "country": "USA"}
+                        
+                        # Returning a list of keys and values
+                        print(person.keys()) # Output: ["name", "age", "city", "country"]
+                        print(person.values()) # Output: ["Alice", 35, "New York", "USA"]
+                    </code>
+                </pre>
+            </article>
+        </div>
+
+        <hr>
+
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>8. Functions
+                </h2>
+                <p>Functions are blocks of code that can be called multiple times with different arguments. Arguments are passed to a function using parentheses. Functions can return values using the return keyword.
+                </p>
+                <p><button class="btn btn-outline-success" id="l8">Lesson 8</button></p>
+                <pre>
+                    <code>                        
+                        # Defining a function
+                        def greet(name):
+                            print("Hello, " + name + "!")
+                            
+                        # Calling a function
+                        greet("Alice") # Output: "Hello, Alice!"
+
+                        # Defining a function with a return value
+                        def square(x):
+                            return x ** 2
+
+                        # Calling a function with a return value
+                        result = square(3)
+                        print(result) # Output: 9
+                    </code>
+                </pre>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>9. File Handling
+                </h2>
+                <p>Files can be read and written using Python. The <code>open()</code> function is used to open a file. The <code>read()</code> method is used to read the contents of a file. The <code>write()</code> method is used to write to a file. The <code>clode()</code> method is used to close a file.
+                </p>
+                <p><button class="btn btn-outline-success" id="l9">Lesson 9</button></p>
+                <pre>
+                    <code>                        
+                        # Writing to a file
+                        file = open("example.txt", "w")
+                        file.write("Hello, world!")
+                        file.close()
+                        
+                        # Reading from a file
+                        file = open("example.txt", "r")
+                        content = file.read()
+                        print(content) # Output: "Hello, world!"
+                        file.close()
+                    </code>
+                </pre>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>10. Regular expressions
+                </h2>
+                <p>Regular expressions are patterns that can be used to match strings. The re module is used to work with regular expressions in Python. The <code>search()</code> method is used to search for a pattern in a string. The <code>findall()</code> method is used to find all occurrences of a pattern in a string.
+                </p>
+                <p><button class="btn btn-outline-success" id="l10">Lesson 10</button></p>
+                <pre>
+                    <code>                        
+                        import re
+
+                        # Searching for a pattern
+                        text = "The quick brown fox jumps over the lazy dog."
+                        pattern = "fox"
+                        result = re.search(pattern, text)
+                        if result:
+                            print("Match found!")
+                        else:
+                            print("Match not found.")
+                        
+                        # Finding all occurrences of a pattern
+                        text = "The quick brown fox jumps over the lazy dog."
+                        pattern = "the"
+                        result = re.findall(pattern, text)
+                        print(result) # Output: ["the", "the"]
+                    </code>
+                </pre>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <article class="col-xs-12">
+                <h2>11. Error handling
+                </h2>
+                <p>Errors can be handled using try-except blocks. The try block contains the code that might raise an error, and the except block contains the code that should be executed if an error occurs.
+
+                </p>
+                <p><button class="btn btn-outline-success" id="l11">Lesson 11</button></p>
+                <pre>
+                    <code>                        
+                        # Handling an error
+                        try:
+                            x = 1 / 0
+                        except ZeroDivisionError:
+                            print("Division by zero!")
+
+                        # Handling multiple errors
+                        try:
+                            x = 1 / 0
+                        except ZeroDivisionError:
+                            print("Division by zero!")
+                        except:
+                            print("An error occurred.")ò
+                    </code>
+                </pre>
+            </article>
+        </div>
+
+        <hr>
+
+    </div>
+
+		</div><!--/Center Column-->
+
+
+
+
+	</div><!--/container-fluid-->
+	
+	<footer>
+		<div class="footer-blurb">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 footer-blurb-item">
+						<h3><i class="fa fa-text-height" aria-hidden="true"></i> Comprehension</h3>
+						<p>Understanding how to code with the basic syntax.</p>
+						<p><a class="btn btn-primary" href="/pc">See now!</a></p>
+					</div>
+					<div class="col-sm-3 footer-blurb-item">
+						<h3><i class="fa fa-wrench" aria-hidden="true"></i> Libraries</h3>
+                        <p>Learn about the exciting world about python libraries, and how much of a blessing they are.</p>
+						<p><a class="btn btn-success" href="/pl">See now!</a></p>
+					</div>
+					<div class="col-sm-3 footer-blurb-item">
+						<h3><i class="fa fa-paperclip" aria-hidden="true"></i> Projects</h3>
+                        <p>Do some projects and learn how to make your own (don't forget to shaere them on your profile!).</p>
+						<p><a class="btn btn-primary" href="/pp">See now!</a></p>
+					</div>
+					<div class="col-sm-3 footer-blurb-item">
+						
+						<!-- Thumbnails --> 
+						<h3><i class="fa fa-camera" aria-hidden="true"></i> </h3>
+							<div class="row">
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=vine" alt="">
+									</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=sky" alt="">
+									</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=sky" alt="">
+									</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#" class="img-fluid">
+										<img src="holder.js/110x80?theme=vine" alt="">
+									</a>
+								</div>
+							</div>
+							
+					</div>
+
+				</div>
+				<!-- /.row -->	
+			</div>
+        </div>
+        
+        <div class="small-print">
+        	<div class="container">
+        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        		<p>Copyright &copy; Example.com 2015 </p>
+        	</div>
+        </div>
+	</footer>
+
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+
+    <!-- Tether -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 4 JavaScript. This is for the alpha 3 release of Bootstrap 4. This should be updated when Bootstrap 4 is officially released. -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+
+    <!-- Initialize Bootstrap functionality -->
+    <script>
+    // Initialize tooltip component
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // Initialize popover component
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    </script> 
+    
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+	
+</body>
+
+</html>
