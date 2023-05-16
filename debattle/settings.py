@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vdm$xp-!t_g*07ijog-6%y3*1l*0fqw9uya3j1*i4-#l@pa+1-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'debattle.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')] + [os.path.join(BASE_DIR, 'templates/python')] + [os.path.join(BASE_DIR, 'templates/html')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

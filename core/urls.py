@@ -18,9 +18,13 @@ urlpatterns = [
     path('pwdlist', views.pwdlist, name="pwdlist"),
     path('aboutus', views.aboutus, name='aboutus'),
 
-    #lessons
+    #python
     path('ps', views.ps, name='ps'),
     path('pc', views.pc, name='pc'),
     path('pl', views.pl, name='pl'),
     path('pp', views.pp, name='pp'),
+
+    #html
+    path('hi', views.hi, name='hi'),
+    path('hs', views.hs, name='hs'),
 ]

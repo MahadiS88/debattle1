@@ -47,7 +47,11 @@
                             <div class="col-span-2">
                                 <label for=""> Password list</label>
                                 {% for usr, pwd in userinfo.items%}
-                                <h1 class="font-semibold text-lg">| Username: {{usr}} | Password: {{pwd}} |</h1>
+                                <ul>
+                                    <li>| Username: {{usr}} |</li>
+                                    <li>| Email: {{em}} |</li>
+                                    <li>| Password: {{pwd}} |</li>
+                                </ul>
                                 {% endfor%}
 
                             </div>

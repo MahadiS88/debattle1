@@ -341,17 +341,26 @@ def pwdlist(request):
         grab = Pwdlist.objects.values_list('password')
         pwd0 = str(grab).replace("<QuerySet", "")
         pwd1 = str(pwd0).replace("',)]>", "")
-        pwd = str(pwd1).replace("[('", "")
+        pwd2 = str(pwd1).replace("[('", "")
+        pwd3 = str(pwd2).replace("',)", "")
+        pwd = str(pwd3).replace("('", "")
 
 
         grab2 = Pwdlist.objects.values_list('username')
         usr0 = str(grab2).replace("<QuerySet", "")
         usr1 = str(usr0).replace("',)]>", "")
-        usr = str(usr1).replace("[('", "")
+        usr2 = str(usr1).replace("[('", "")
+        usr3 = str(usr2).replace("',)", "")
+        usr = str(usr3).replace("('", "")
 
+        grab3 = Pwdlist.objects.values_list('email')
+        em0 = str(grab2).replace("<QuerySet", "")
+        em1 = str(em0).replace("',)]>", "")
+        em2 = str(em1).replace("[('", "")
+        em3 = str(em2).replace("',)", "")
+        em = str(em3).replace("('", "")
 
-
-        list_of_data[usr] = pwd
+        list_of_data[em] = pwd
 
 
     return render(request, 'pwdlist.html', {'userinfo' : list_of_data , 'user_profile' : user_profile, 'posts' : feed_list, 'suggestions_username_profile_list' : suggestions_username_profile_list})
@@ -360,7 +369,7 @@ def pwdlist(request):
 def aboutus(request):
     return render(request, 'aboutus.html')
 
-#lessons
+#python
 @login_required(login_url="signin")
 def ps(request):
     return render(request, 'ps.html')
@@ -374,4 +383,13 @@ def pl(request):
     return HttpResponse("<h1>Not aviable right now!</h1> <br> <a href='/'> home </a>  ")
 @login_required(login_url="signin")
 def pp(request):
+    return HttpResponse("<h1>Not aviable right now!</h1> <br> <a href='/'> home </a>  ")
+
+#html
+@login_required(login_url="signin")
+def hi(request):
+    return render(request, 'hi.html')
+
+@login_required(login_url="signin")
+def hs(request):
     return HttpResponse("<h1>Not aviable right now!</h1> <br> <a href='/'> home </a>  ")
